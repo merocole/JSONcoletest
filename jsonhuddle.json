@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MeroHuddleOutput",
+  "type": "object",
+  "properties": {
+    "Date": {
+      "type": "string",
+      "description": "The date of the huddle sheet in YYYY-MM-DD format."
+    },
+    "Focus_Area": {
+      "type": "string",
+      "description": "The operational pillar that requires attention.",
+      "enum": [
+        "Cleaning Compliance",
+        "Traffic Responsiveness",
+        "Work Order Performance",
+        "Consumables Management",
+        "Platform Usage"
+      ]
+    },
+    "Instruction": {
+      "type": "string",
+      "description": "A detailed, 4-point bulleted task list for the team lead."
+    }
+  },
+  "required": [
+    "Date",
+    "Focus_Area",
+    "Instruction"
+  ],
+  "additionalProperties": false
+}
