@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "FeedbackClassification",
+  "type": "object",
+  "properties": {
+    "summary": {
+      "type": "string",
+      "description": "Short explanation of the issue or feedback."
+    },
+    "category": {
+      "type": "string",
+      "description": "High-level category of the issue.",
+      "enum": ["Staffing", "Complaint", "Supply"]
+    },
+    "sentiment": {
+      "type": "string",
+      "description": "Overall sentiment of the feedback.",
+      "enum": ["Negative", "Neutral", "Positive"]
+    },
+    "suggested_action": {
+      "type": "string",
+      "description": "Recommended action to take based on the feedback.",
+      "enum": ["Triage", "Deep Clean"]
+    }
+  },
+  "required": [
+    "summary",
+    "category",
+    "sentiment",
+    "suggested_action"
+  ],
+  "additionalProperties": false
+}
