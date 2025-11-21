@@ -10,7 +10,13 @@
     "category": {
       "type": "string",
       "description": "High-level category of the issue.",
-      "enum": ["Staffing", "Complaint", "Supply"]
+       "enum": [
+        "Cleaning Compliance",
+        "Traffic Responsiveness",
+        "Work Order Performance",
+        "Consumables Management",
+        "Platform Usage"
+      ]
     },
     "sentiment": {
       "type": "string",
@@ -20,7 +26,7 @@
     "suggested_action": {
       "type": "string",
       "description": "Recommended action to take based on the feedback.",
-      "enum": ["Triage", "Deep Clean"]
+      "enum": ["Triage", "Monitor"]
     }
   },
   "required": [
